@@ -1,0 +1,21 @@
+{
+    "name": "develme/podio-4-laravel",
+    "description": "Podio integration with Laravel.",
+    "require": {
+        "laravel/framework": "5.0.*",
+        "podio/podio-php": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevelMe\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Verron Knowles",
+            "email": "Verron.Knowles@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
