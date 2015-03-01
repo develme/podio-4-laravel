@@ -1,4 +1,4 @@
-?php 
+<?php
 
 namespace DevelMe\Podio;
 
@@ -13,7 +13,7 @@ class PodioServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-    
+
     }
     /**
      * Register the service provider.
@@ -22,6 +22,11 @@ class PodioServiceProvider extends ServiceProvider
      */
     public function register()
     {
-    
+        $this->app->singleton('podio', function ($app) {
+            $client_id = env('PODIO_CLIENT_ID');
+            $client_secret = env('PODIO_CLIENT_SECRET');
+            return new Podio(compact('client_id', 'client_secret'));
+
+        });
     }
 }
